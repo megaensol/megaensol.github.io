@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <!-- 정사각형 테두리 -->
+    <rect x="10" y="10" width="180" height="180" rx="20" fill="none" stroke="#ffffff" stroke-width="15"/>
+ 
+    <!-- M 로고 -->
+    <path d="M50 140 L50 60 L85 95 L100 80 L115 95 L150 60 L150 140" 
+          fill="#ffffff"
+          stroke="none"/>
+</svg> 

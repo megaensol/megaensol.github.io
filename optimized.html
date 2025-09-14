@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메가엔솔(주) - 최첨단 클린룸 솔루션</title>
+    <style>
+        /* Base styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            padding: 20px 0;
+        }
+
+        .logo {
+            max-width: 200px;
+            height: auto;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .hero img {
+            max-width: 400px;
+            height: auto;
+        }
+
+        .hero h1 {
+            color: #0a1451;
+            font-size: 2.5em;
+            margin: 20px 0;
+        }
+
+        /* Main Content */
+        .main-content {
+            background-color: #0a1451;
+            color: white;
+            padding: 40px 0;
+        }
+
+        /* Services */
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 0;
+        }
+
+        .service-card {
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .service-card img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        .map {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a1451;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* Responsive Images */
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Slider */
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slider img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="마크.png" alt="메가엔솔 로고" class="logo">
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img src="가로.png" alt="메가엔솔 로고" style="max-width: 600px;">
+            <h1>최첨단 클린룸 솔루션의 리더</h1>
+        </div>
+    </section>
+
+    <section class="main-content">
+        <div class="container">
+            <div class="slider">
+                <img src="첫번째 슬라이드.JPG" alt="클린룸 이미지 1" loading="lazy">
+                <img src="두번째 슬라이드.JPG" alt="클린룸 이미지 2" loading="lazy">
+                <img src="세번째 슬라이드.jpg" alt="클린룸 이미지 3" loading="lazy">
+                <img src="네번째 슬라이드.jpg" alt="클린룸 이미지 4" loading="lazy">
+                <img src="다섯번째 슬라이드.jpg" alt="클린룸 이미지 5" loading="lazy">
+            </div>
+
+            <div class="services">
+                <div class="service-card">
+                    <img src="design.svg" alt="설계">
+                    <h3>설계</h3>
+                    <p>최적화된 클린룸 설계</p>
+                </div>
+                <div class="service-card">
+                    <img src="construction.svg" alt="시공">
+                    <h3>시공</h3>
+                    <p>전문적인 클린룸 시공</p>
+                </div>
+                <div class="service-card">
+                    <img src="consulting.svg" alt="컨설팅">
+                    <h3>컨설팅</h3>
+                    <p>전문가 컨설팅 서비스</p>
+                </div>
+            </div>
+
+            <div class="contact">
+                <h2>Contact Us</h2>
+                <p>경기도 화성시 동탄첨단산업단지 노작로 155, 메가엔솔(주)</p>
+                <p>전화: 031-377-3055 | 팩스: 031-377-3056 | 이메일: info@megaensol.com</p>
+                <img src="지도.jpg" alt="회사 위치" class="map" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 메가엔솔(주). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple image slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('.slider');
+            const images = slider.getElementsByTagName('img');
+            let currentImage = 0;
+
+            function showNextImage() {
+                images[currentImage].style.display = 'none';
+                currentImage = (currentImage + 1) % images.length;
+                images[currentImage].style.display = 'block';
+            }
+
+            // Hide all images except the first one
+            for (let i = 1; i < images.length; i++) {
+                images[i].style.display = 'none';
+            }
+
+            // Change image every 3 seconds
+            setInterval(showNextImage, 3000);
+        });
+    </script>
+</body>
+</html> 
